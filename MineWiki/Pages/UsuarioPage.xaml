@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineWiki.Pages.UsuarioPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="UsuarioPage"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#8C7575"/>
+    </ContentPage.Behaviors>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid Margin="0, -5">
+                <Frame BackgroundColor="#8C7575" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <Image Source="minewikilogo3" WidthRequest="90"></Image>
+                </Frame>
+            </Grid>
+
+
+            <Grid Margin="0, 60, 0, 20">
+                <Label Text="Perfil"
+       TextColor="Black"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontSize="Title"
+       FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+            <Grid Margin="30, 10">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="15">
+                    <Label Text="Nome" TextColor="Black" FontFamily="JuliusSansRegular" TextDecorations="Underline"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="30, 10">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="15">
+                    <Label Text="E-mail" TextColor="Black" FontFamily="JuliusSansRegular" TextDecorations="Underline"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="30, 10">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="15">
+                    <Label Text="Senha" TextColor="Black" FontFamily="JuliusSansRegular" TextDecorations="Underline"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="50, 0">
+                <HorizontalStackLayout>
+                    <Label Text="ALTERE A SENHA"
+                        TextColor="Black"
+                        HorizontalTextAlignment="Center"
+                        FontFamily="JuliusSansRegular"
+                        FontSize="Caption"
+                        Margin="0, 15"/>
+                    <Button Text="AQUI!"
+                        x:Name="btnAlterar"
+                        Clicked="btnAlterar_Clicked"
+                        TextColor="#3EBD52"
+                        BackgroundColor="Transparent"
+                        FontFamily="JuliusSansRegular"
+                        FontSize="Caption"/>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <Grid>
+                <Button Text="Apagar Conta" 
+                        BackgroundColor="#F65E5E" 
+                        BorderColor="#DB1A1A" 
+                        TextColor="White" 
+                        FontFamily="JuliusSansRegular" 
+                        HorizontalOptions="Start" 
+                        Padding="40, 20" 
+                        Margin="30, 0" 
+                        CornerRadius="15"
+                        x:Name="BtnApagar"
+                        Clicked="BtnApagar_Clicked"/>
+            </Grid>
+
+            <Grid Margin="0, 184, 0, 0">
+                <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <HorizontalStackLayout HorizontalOptions="Center" Margin="0">
+                        <ImageButton Source="searchicon" Margin="40" x:Name="btnPesquisarTab" Clicked="btnPesquisarTab_Clicked"/>
+                        <ImageButton Source="homeicon" Margin="20" x:Name="btnHome" Clicked="btnHome_Clicked"/>
+                        <ImageButton Source="usericon" Margin="40" x:Name="btnUser" Clicked="btnUser_Clicked"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

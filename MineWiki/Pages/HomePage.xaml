@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineWiki.Pages.HomePage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"             
+             Title="HomePage"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#8C7575"/>
+    </ContentPage.Behaviors>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid Margin="0, -5">
+                <Frame BackgroundColor="#8C7575" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <Image Source="minewikilogo3" WidthRequest="90"></Image>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="0, 60, 0, 0">
+                <Label Text="Home"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Title"
+                   FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+            <Grid>
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" Padding="0" CornerRadius="15" Margin="60, 60, 60, 5">
+                    <HorizontalStackLayout>
+                        <Button Text="Procurar..."
+                                BackgroundColor="Transparent"
+                                Padding="0"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               FontFamily="JuliusSansRegular"
+                               Margin="10"
+                                x:Name="btnPesquisar"
+                                Clicked="btnPesquisar_Clicked"/>
+                        <ImageButton Source="searchicon"
+                               WidthRequest="25"
+                               Margin="145, 0, 0, 0"
+                               x:Name="iconPesquisar"
+                               Clicked="btnPesquisar_Clicked"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </Grid>
+            
+            <Frame BorderColor="Transparent">
+                <Grid>
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                            <ImageButton Source="craftingicon" WidthRequest="120" Margin="15" x:Name="btnCraftingTab" Clicked="btnCraftingTab_Clicked"/>
+                        <ImageButton Source="potionicon" WidthRequest="120" Margin="15" x:Name="btnPocaoAba" Clicked="btnPocaoAba_Clicked"/>
+                    </HorizontalStackLayout>
+                </Grid>
+            </Frame>
+
+            <Frame Padding="89" BorderColor="Transparent"></Frame>
+            
+            <Grid>
+                <Frame BackgroundColor="Transparent" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <HorizontalStackLayout HorizontalOptions="Center" Margin="0">
+                        <ImageButton Source="searchicon" Margin="40" x:Name="btnPesquisarTab" Clicked="btnPesquisar_Clicked"/>
+                        <ImageButton Source="homeicon" Margin="20" x:Name="btnHome" Clicked="btnHome_Clicked"/>
+                        <ImageButton Source="usericon" Margin="40" x:Name="btnUser" Clicked="btnUser_Clicked"/>
+                    </HorizontalStackLayout>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

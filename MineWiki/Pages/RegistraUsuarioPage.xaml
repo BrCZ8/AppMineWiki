@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineWiki.Pages.RegistraUsuarioPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="RegistraUsuarioPage"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#8C7575"/>
+    </ContentPage.Behaviors>
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid Margin="0, -5">
+                <Frame BackgroundColor="#8C7575" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <Image Source="minewikilogo3" WidthRequest="90"></Image>
+                </Frame>
+            </Grid>
+            <Grid Margin="0, 60, 0, 0">
+                <Label Text="Cadastro"
+       TextColor="Black"
+       VerticalOptions="Center"
+       HorizontalOptions="Center"
+       FontSize="Title"
+       FontFamily="JuliusSansRegular"/>
+            </Grid>
+            <Grid HorizontalOptions="Start" HeightRequest="30" Margin="15, 20, 0, 40">
+                <ImageButton Source="btn_voltar" x:Name="BtnVoltar" Clicked="btnVoltar_Clicked"/>
+            </Grid>
+
+            <Grid Margin="35, 0" Padding="15, 0">
+                <Label x:Name="lblNome"
+        Text="Nome do Usuário   "
+        TextDecorations="Underline"
+        TextColor="Black"
+        FontSize="Subtitle"
+        FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+            <Grid Margin="30, 0, 30, 20" Padding="15">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="10" Padding="5">
+                    <Entry x:Name="txtNome"
+                        Text="{Binding Nome}"
+                        Placeholder="Insira Aqui..."
+                        Keyboard="Text"
+                        FontFamily="JuliusSansRegular"
+                        VerticalOptions="Center"
+                        TextColor="Black"
+                        ClearButtonVisibility="WhileEditing"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="35, 0" Padding="15, 0">
+                <Label x:Name="lblEmail"
+                    Text="E-mail    "
+                    TextDecorations="Underline"               
+                    TextColor="Black"
+                    FontSize="Subtitle"
+                    FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+            <Grid Margin="30, 0, 30, 20" Padding="15">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="10" Padding="5">
+                    <Entry x:Name="txtEmail"
+                        Text="{Binding Email}"    
+                        Placeholder="Insira aqui..."
+                        Keyboard="Email"
+                        FontFamily="JuliusSansRegular"
+                        TextColor="Black"
+                        ClearButtonVisibility="WhileEditing"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="35, 0" Padding="15, 0">
+                <Label x:Name="lblSenha"
+                    FontSize="Subtitle"
+                    Text="Senha    "
+                    TextDecorations="Underline"
+                    TextColor="Black"
+                    FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+            <Grid Margin="30, 0, 30, 20" Padding="15">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="10" Padding="5">
+                    <Entry Placeholder="Insira Aqui..."
+                        Text="{Binding Senha}"    
+                        x:Name="txtSenha"
+                        IsPassword="True"
+                        FontFamily="JuliusSansRegular"
+                        TextColor="Black"
+                        ClearButtonVisibility="WhileEditing"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="35, 0" Padding="15, 0">
+                <Label x:Name="lblConfirmarSenha"
+                   FontSize="Subtitle"
+                   Text="Confirmar Senha   "
+                   TextDecorations="Underline"
+                   TextColor="Black"
+                   FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+            <Grid Margin="30, 0, 30, 30" Padding="15">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="10" Padding="5">
+                    <Entry Placeholder="Insira aqui..."
+                       x:Name="txtConfirmarSenha"
+                       IsPassword="True"
+                       FontFamily="JuliusSansRegular"
+                       TextColor="Black"
+                       ClearButtonVisibility="WhileEditing"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="0, 0, 0, 100">
+                <Button Text="Criar Conta"
+                    CornerRadius="10"
+                    TextColor="White"
+                    FontSize="Subtitle"
+                    WidthRequest="320"
+                    HeightRequest="60"
+                    x:Name="btnCadastrar" 
+                    Clicked="btnCadastrar_Clicked"
+                    BackgroundColor="#8C7575"
+                    FontFamily="JuliusSansRegular"/>
+            </Grid>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

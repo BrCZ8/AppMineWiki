@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineWiki.Pages.LoginPage"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="LoginPage"        
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#8C7575"/>
+    </ContentPage.Behaviors>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid Margin="0, -5">
+                <Frame BackgroundColor="#8C7575" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <Image Source="minewikilogo3" WidthRequest="90"></Image>
+                </Frame>
+            </Grid>
+            <Image Source="logo_login" Margin="20" HeightRequest="200" WidthRequest="200"/>
+
+            <Grid Margin="30, 0" Padding="15, 0">
+                <Label x:Name="lblEmail"
+                Text="E-MAIL    "
+                TextDecorations="Underline"
+                FontFamily="JuliusSansRegular"
+                TextColor="Black"
+                FontSize="Subtitle"/>
+            </Grid>
+            <Grid Margin="30, 0, 30, 30" Padding="15">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="10" Padding="5">
+                    <Entry x:Name="txtEmail"
+                        VerticalOptions="Center"
+                        FontFamily="JuliusSansRegular"
+                        Placeholder="Insira aqui..."
+                        Keyboard="Email"
+                        ClearButtonVisibility="WhileEditing"
+                        TextColor="Black"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="30, 0" Padding="15, 0">
+                <Label x:Name="lblSenha"
+                    FontFamily="JuliusSansRegular"
+                    FontSize="Subtitle"
+                    Text="SENHA     "
+                    TextDecorations="Underline"
+                    TextColor="Black"/>
+            </Grid>
+            <Grid Margin="30, 0, 30, 30" Padding="15">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="10" Padding="5">
+                    <Entry Placeholder="Insira aqui..."
+                        VerticalOptions="Center"
+                        FontFamily="JuliusSansRegular"
+                        x:Name="txtSenha"
+                        IsPassword="True"
+                        TextColor="Black"
+                        ClearButtonVisibility="WhileEditing"/>
+                </Frame>
+            </Grid>
+
+            <Grid Margin="25">
+                <Button Text="ACESSAR"
+        CornerRadius="10"
+        FontFamily="JuliusSansRegular"
+        TextColor="White" 
+        WidthRequest="320"
+        HeightRequest="60"
+        x:Name="btnEntrar" 
+        Clicked="btnEntrar_Clicked"
+        BackgroundColor="#8C7575"/>
+            </Grid>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Grid>
+                    <Label Text="NÃO POSSUI UMA CONTA? CRIE AGORA"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               FontFamily="JuliusSansRegular"
+                   FontSize="Caption"/>
+                    <Button Text="AQUI!"
+                x:Name="btnRegistrar"
+                Clicked="btnRegistrar_Clicked"
+                TextColor="#3EBD52"
+                BackgroundColor="Transparent"
+                FontFamily="JuliusSansRegular"
+                FontSize="Default"
+                Margin="5"/>
+                </Grid>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

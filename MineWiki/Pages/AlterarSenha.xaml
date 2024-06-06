@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MineWiki.Pages.AlterarSenha"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="AlterarSenha"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#8C7575"/>
+    </ContentPage.Behaviors>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid Margin="0, -5">
+                <Frame BackgroundColor="#8C7575" CornerRadius="10" Padding="0" BorderColor="#8C7575">
+                    <Image Source="minewikilogo3" WidthRequest="90"></Image>
+                </Frame>
+            </Grid>
+
+
+
+            <Grid HorizontalOptions="Start" HeightRequest="30" Margin="15, 60, 0, 30">
+                <ImageButton Source="btn_voltar" x:Name="BtnVoltar" Clicked="BtnVoltar_Clicked"/>
+            </Grid>
+
+
+            <Label Text="Senha Antiga" Margin="40, 0" TextDecorations="Underline" FontFamily="JuliusSansRegular" TextColor="Black"/>
+            <Grid Margin="40, 10, 40, 20">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="15">
+                    <Label Text="Insira aqui..." TextColor="Gray" FontFamily="JuliusSansRegular"/>
+                </Frame>
+            </Grid>
+
+
+            <Label Text="Nova Senha" Margin="40, 0" TextDecorations="Underline" FontFamily="JuliusSansRegular" TextColor="Black"/>
+            <Grid Margin="40, 10, 40, 20">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="15">
+                    <Label Text="Insira aqui..." TextColor="Gray" FontFamily="JuliusSansRegular" />
+                </Frame>
+            </Grid>
+
+
+            <Label Text="Confirmar Nova Senha" Margin="40, 0" TextDecorations="Underline" FontFamily="JuliusSansRegular" TextColor="Black"/>
+            <Grid Margin="40, 10, 40, 20">
+                <Frame BackgroundColor="Transparent" BorderColor="#8C7575" CornerRadius="15">
+                    <Label Text="Insira aqui..." TextColor="Gray" FontFamily="JuliusSansRegular" />
+                </Frame>
+            </Grid>
+
+            <Grid>
+                <Button Text="Alterar Senha" BackgroundColor="#8C7575" BorderColor="#8C7575" TextColor="White" FontFamily="JuliusSansRegular" HorizontalOptions="Center" Padding="100, 20" Margin="30, 40" CornerRadius="15"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
